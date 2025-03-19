@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat user interface</title>
+</head>
+<style>
+    .main{
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 400px;
+        height: 600px;
+        background: url(wapp.jpg);
+        position: absolute;
+        top: 40px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        overflow: scroll;
+        scrollbar-width: none;
+    
+
+
+    }
+    img{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        padding:10px ;
+    }
+    .container {
+        display: flex;
+        font-size: 20px;
+        background-color: darkgreen;
+        position: relative;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: sticky;
+        top: 0%;
+        z-index: 10;
+        
+    }
+    .alex1{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: relative;
+        max-width: 30%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177);
+        padding-left: 5px;
+        margin-left: 5px;
+    }
+    .time1{
+        padding-top: 30px;
+        position: absolute;
+        right: 1%;
+    }
+    .alex2{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: relative;
+        left: 60%;
+        max-width: 35%;
+        border-radius: 5px;
+        display: flex;
+        padding-left: 5px;
+        margin-left: 5px;
+       
+    }
+    .time2{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+
+    }
+    .alex3{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: relative;
+        max-width: 50%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177);
+        padding-left: 5px;
+        margin-left: 5px;
+
+    }
+    .time3{
+        padding-top: 30px;
+        position: absolute;
+        right: 1%;
+    }
+    .alex4{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: sticky;
+        left: 52%;
+        max-width: 50%;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5px;
+        padding-left: 5px;
+        margin-right: 5px;
+    }
+    .time4{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+
+    }
+    .alex5{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: sticky;
+        max-width: 50%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177);
+    }
+    .time5{
+        padding-top: 30px;
+        position: absolute;
+        right: 1%;
+    }
+    .alex6{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: relative;
+        left: 58%;
+        max-width: 40%;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5px;
+        padding-left: 5px;
+    }
+    .time6{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+    }
+    .alex7{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: sticky;
+        max-width: 50%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177);
+    }
+    .time7{
+        padding-top: 30px;
+        position: absolute;
+        right: 1%;
+    }
+    .alex8{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: sticky;
+        left: 52%;
+        max-width: 50%;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5px; 
+    }
+    .time8{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+    }
+    .alex9{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: sticky;
+        max-width: 60%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177); 
+    }
+    .time9{
+        padding-top: 30px;
+        position: absolute;
+        right: 2%;
+    }
+    .alex10{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: sticky;
+        left: 52%;
+        max-width: 75%;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5px; 
+    }
+    .time10{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+    }
+    .alex11,.alex13,.alex15,.alex17,.alex19,.alex21,.alex23,.alex25,.alex27{
+        border: 2px solid rgb(245, 164, 177);
+        margin-top: 2px;
+        position: sticky;
+        max-width: 50%;
+        display: flex ;
+        border-radius: 5px;
+        background-color: rgb(245, 164, 177); 
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+    .time11,.time13,.time15,.time17,.time19,.time21,.time23,.time25,.time27{
+        padding-top: 30px;
+        position: absolute;
+        right: 2%;
+    }
+    .alex12,.alex14,.alex16,.alex18,.alex20,.alex22,.alex24,.alex26{
+        border: 2px solid rgb(179, 249, 158);
+        background-color: rgb(179, 249, 158);
+        position: sticky;
+        left: 52%;
+        max-width: 75%;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+    }
+    .time12,.time14,.time16,.time18,.time20,.time22,.time24,.time26{
+        padding-top: 30px;
+        position: absolute;
+        right: 3%;
+    }
+    .alex13{
+        max-width: 70%;
+    }
+   .date1,.date3{
+    border: 2px solid blue;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: rgb(70, 212, 212);
+      margin-left: 40%;
+      max-width: 70px;
+      margin-top: 5px;
+      position: sticky;
+      top: 70px;
+      z-index: 10;
+   }
+   .date0,.date2,.date4{
+    border: 2px solid black;
+    max-width: 70px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgb(224, 67, 94);
+    margin-left: 40%;
+    margin-top: 5px;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+
+   }
+   .alex5,.alex7,.alex9{
+    margin-left: 5px;
+    padding-left: 5px;
+   }
+   .alex6,.alex8,.alex10{
+    margin-right: 5px;
+    padding-left: 5px;
+   }
+   .alex27{
+    margin-bottom: 5px;
+   }
+   .alex20{
+    max-width: 50%;
+   }
+   .alex22{
+    max-width: 50%;
+   }
+   .alex24{
+    max-width: 50%;
+   
+   }
+   .calling{
+    display: flex;
+    padding-left: 70px;
+    border-radius: 50%;
+   }
+    
+</style>
+<body>
+  <div class="main">
+    <div class="container">
+        <img src="rolex.jpg" alt="image">
+        <p class="e1">Vamsikrishna</p>
+        <div class="calling">
+            <img src="vdeo2.png" alt="">
+            <img src="vdeo1.png" alt="">
+        </div>
+
+    </div>
+    <div class="date0">
+        <span class="name">August 01</span>
+    </div>
+
+    <div class="alex1">
+        <p>Hello</p>
+        <span class="time1">9:00pm</span>
+    </div>
+    <div class="alex2">
+        <p>Hello</p>
+        <span class="time2">9:01pm</span>
+    </div>
+    <div class="alex3">
+        <p>Em chestunnav ra</p>
+        <span class="time3">9:02pm</span>
+    </div>
+    <div class="alex4">
+        <p>Movie chustunna</p>
+        <span class="time4">9:03pm</span>
+    </div>
+    <div class="date1">
+        <span class="dt">August 02</span>
+
+    </div>
+    <div class="alex5">
+        <p>which movie</p>
+        <span class="time5">9:04pm</span>
+    </div>
+    <div class="alex6">
+        <p>KGF Chapter2</p>
+        <span class="time6">9:05pm</span>
+    </div>
+    <div class="alex7">
+        <p>Full Busy anukunataa..</p>
+        <span class="time7">9:06pm</span>
+    </div>
+    <div class="alex8">
+        <p>Ala em ledu raa..</p>
+        <span class="time8">9:07pm</span>
+    </div>
+    <div class="date2">
+        <span class="dt1">August 03</span>
+    </div>
+    <div class="alex9">
+        <p>Enduku class ki Ravatledu</p>
+        <span class="time9">9:08pm</span>
+    </div>
+    <div class="alex10">
+        <p>Chala early ga legusthunaa anduke</p>
+        <span class="time10">9:09pm</span>
+    </div>
+    <div class="alex11">
+        <p>Ohoo A time ki..</p>
+        <span class="time11">9:10pm</span>
+    </div>
+    <div class="alex12">
+        <p>between 10 to 11 raa</p>
+        <span class="time12">9:11pm</span>
+    </div>
+    <div class="date3">
+        <span>August 04</span>
+    </div>
+    <div class="alex13">
+       <p>chala early ga legustunnave</p>
+       <span class="time13">9:02am</span>
+    </div>
+    <div class="alex14">
+        <p>Atluntadhi manathoni</p>
+        <span class="time14">9:03am</span>
+    </div>
+    <div class="alex15">
+        <p>absent paduthundi gaa</p>
+        <span class="time15">9:55am</span>
+    </div>
+    <div class="alex16">
+        <p>onlnine undhigaa</p>
+        <span class="time16">10:01am</span>
+    </div>
+    <div class="date4">
+        <span>August 05</span>
+    </div>
+    <div class="alex17">
+        <p>mari communication</p>
+        <span class="time17">10:03am</span>
+    </div>
+    <div class="alex18">
+        <p>Akkada kuda online option undhi</p>
+        <span class="time18">10:05am</span>
+    </div>
+    <div class="alex19">
+        <p>nice plan</p>
+        <span class="time19">10:07am</span>
+    </div>
+    <div class="alex20">
+        <p>tqq so much</p>
+        <span class="time20">10:09am</span>
+
+    </div>
+    <div class="alex21">
+        <p>task chesava</p>
+        <span class="time21">10:12am</span>
+    </div>
+    <div class="alex22">
+        <p>Haa nuvv</p>
+        <span class="time22">10:14am</span>
+    </div>
+    <div class="alex23">
+
+        <p>chesaa</p>
+        <span class="time23">10:20am</span>
+        
+    </div>
+    <div class="alex24">
+        <p>...Okay bye ra</p>
+        <span class="time24">10:23am</span>
+    </div>
+    <div class="alex25">
+        <p>...Haa Byee ra</p>
+        <span class="time25">10:25am</span>
+        </div>
+        <div class="alex26">
+            <p>All THE BEST</p>
+            <span class="time26">10:25am</span>
+        </div>
+        <div class="alex27">
+            <p>thanks raa</p>
+            <span class="time27">10:27am</span>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
